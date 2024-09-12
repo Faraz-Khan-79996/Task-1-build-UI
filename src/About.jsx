@@ -17,12 +17,12 @@ function About() {
                     <h1 className="title-font font-primary sm:text-4xl text-3xl mb-8 md:mb-4 font-bold text-primary">
                         About Us
                     </h1>
-                    <p className="mb-8  w-[447px] font-primary text-secondary_dark leading-7">
-                        Lorem Ipsum is simply dummy text of the printing <br className="block md:hidden"/> and
-                        typesetting industry. Lorem Ipsum has been the<br className="block md:hidden"/>
-                        industry's standard dummy text ever since the 1500s,<br className="block md:hidden"/>
-                        when an unknown printer took a galley of type and<br className="block md:hidden"/>
-                        scrambled it to make a type specimen book. it has<br className="block md:hidden"/>
+                    <p className="mb-8 w-[300px] sm:w-[447px] font-primary text-secondary_dark leading-7">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. it has
                         survived not only five centuries.
                     </p>
                     <div className="flex justify-center">
