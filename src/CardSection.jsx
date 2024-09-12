@@ -118,7 +118,7 @@ const CardPagination = () => {
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 gap-y-10 justify-center"
                 >
                     <div className="col-span-1 place-self-center md:place-self-start md:col-span-2 lg:col-span-3 ml-0 md:ml-16 gap-x-6">
-                        <h2 className="text-[56px] font-semibold text-primary mb-8 lg:text-start text-center">
+                        <h2 className="md:text-[56px] text-2xl font-semibold text-primary md:mb-8 mb-0  lg:text-start text-center">
                             Latest Articles
                         </h2>
                     </div>
@@ -134,7 +134,7 @@ const CardPagination = () => {
             </div>
 
             {/* Pagination Buttons */}
-            <div className="flex justify-center items-center space-x-4 mt-6">
+            <div className="flex justify-center items-center space-x-4 mt-6 p-4">
                 <button
                     onClick={handlePrevious}
                     className={`${

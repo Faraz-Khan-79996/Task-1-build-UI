@@ -10,10 +10,10 @@ const CustomCard = ({ title, description, image }) => {
                 <h2 className="font-bold text-xl text-center md:text-start text-primary mb-2">
                     {title}
                 </h2>
-                <p className="text-secondary_dark md:hidden text-start md:text-start text-[12px] md:text-sm leading-7 mb-4">
+                <p className="text-secondary_dark font-primary md:hidden text-start md:text-start text-[12px] md:text-sm leading-7 mb-4">
                     {description.long}
                 </p>
-                <p className="text-secondary_dark hidden md:block text-start md:text-start text-[15px] leading-7 mb-4">
+                <p className="text-secondary_dark font-primary hidden md:block text-start md:text-start text-[15px] leading-7 mb-4">
                     {description.short}
                 </p>
                 <div className="flex justify-center md:justify-start">
