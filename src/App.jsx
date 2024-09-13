@@ -12,10 +12,10 @@ function App() {
 
   return (
     <>
-    <HeroSection />
-    <About />
-    <CardSection />
-    <Footer />
+      <HeroSection />
+      <About />
+      <CardSection />
+      <Footer />
     </>
   )
 }

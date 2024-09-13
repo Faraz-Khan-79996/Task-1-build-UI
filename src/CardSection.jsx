@@ -99,10 +99,7 @@ const CardPagination = () => {
     };
 
     return (
-        <section className="container mx-auto my-10">
-            {/* <h2 className="text-3xl font-bold mb-8 lg:text-start text-center">Latest Articles</h2> */}
-
-            {/* Cards Container */}
+        <section className="container mx-auto my-10" aria-label="Latest Articles">
             <div className="relative overflow-hidden">
                 <motion.div
                     key={currentPage}
@@ -115,13 +112,13 @@ const CardPagination = () => {
                         x: { type: "spring", stiffness: 300, damping: 30 },
                         opacity: { duration: 0.2 },
                     }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 gap-y-10 justify-center"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 gap-y-10 justify-center max-w-[1225px] mx-auto"
                 >
-                    <div className="col-span-1 place-self-center md:place-self-start md:col-span-2 lg:col-span-3 ml-0 md:ml-16 gap-x-6">
-                        <h2 className="md:text-[56px] text-2xl font-semibold text-primary md:mb-8 mb-0  lg:text-start text-center">
+                    <header className="col-span-1 place-self-center md:place-self-start md:col-span-2 lg:col-span-3 ml-0 md:ml-3 gap-x-6">
+                        <h2 className="md:text-[56px] text-2xl font-semibold text-primary md:mb-8 mb-0 lg:text-start text-center">
                             Latest Articles
                         </h2>
-                    </div>
+                    </header>
                     {cards
                         .slice(
                             currentPage * cardsPerPage,
@@ -133,19 +130,19 @@ const CardPagination = () => {
                 </motion.div>
             </div>
 
-            {/* Pagination Buttons */}
-            <div className="flex justify-center items-center space-x-4 mt-6 p-4">
+            <nav className="flex justify-center items-center space-x-4 mt-6 p-4" aria-label="Article pagination">
                 <button
                     onClick={handlePrevious}
                     className={`${
                         currentPage === 0 ? "opacity-50 cursor-not-allowed" : ""
                     } bg-gray-300 px-3 py-1 rounded`}
                     disabled={currentPage === 0}
+                    aria-label="Previous page"
                 >
                     &lt; 
                 </button>
-                <p>
-                    {currentPage + 1} / {Math.ceil(cards.length / cardsPerPage)}
+                <p aria-live="polite" aria-atomic="true">
+                     {currentPage + 1} / {Math.ceil(cards.length / cardsPerPage)}
                 </p>
                 <button
                     onClick={handleNext}
@@ -159,10 +156,11 @@ const CardPagination = () => {
                         currentPage ===
                         Math.ceil(cards.length / cardsPerPage) - 1
                     }
+                    aria-label="Next page"
                 >
                     &gt;
                 </button>
-            </div>
+            </nav>
         </section>
     );
 };
